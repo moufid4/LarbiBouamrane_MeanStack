@@ -5,6 +5,10 @@ angular.module('larbiAngularApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
+    },
+    {
+      'title': 'Blog',
+      'link': '/blog'
     }];
 
     $scope.isCollapsed = true;
