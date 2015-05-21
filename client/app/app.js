@@ -52,7 +52,7 @@ angular.module('larbiAngularApp', [
       });
     });
   });
-
+// Cover
   angular.module('larbiAngularApp').directive('cover', function ($window) {
     return function (scope, element) {
         var w = angular.element($window);
@@ -64,8 +64,6 @@ angular.module('larbiAngularApp', [
             scope.windowHeight = newValue.h;
             scope.windowWidth = newValue.w;
             console.log(scope);
-
-
 
             scope.style = function () {
                 return { 
@@ -81,3 +79,5 @@ angular.module('larbiAngularApp', [
         });
     }
 });
+
+

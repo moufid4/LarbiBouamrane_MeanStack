@@ -29,3 +29,43 @@ angular.module('larbiAngularApp')
       return route === $location.path();
     };
   });
+
+  // ScrollWatch
+angular.module('larbiAngularApp').directive("scroll", function ($window) {
+    return function(scope, element, attrs) {
+        angular.element($window).bind("scroll", function() {
+          if (this.pageYOffset>70) { 
+                        scope.style = function () {
+                          return { 
+                          'background-color': 'rgba(255, 255, 255, 1)',
+                          'color':'#000'
+                          };
+                          };
+                          scope.color = function () {
+                          return { 
+                          'color':'#000'
+                          };
+                          };
+                                
+                                console.log(this.pageYOffset);
+                  } else {
+                    scope.style = function () {
+                          return { 
+                          'background-color': 'rgba(255, 255, 255, 0)',
+                          };
+                          };
+                          scope.color = function () {
+                          return { 
+                          'color':'#fff'
+                          };
+                          };
+                                console.log(this.pageYOffset);
+                  } 
+
+
+
+            scope.$apply();
+        })
+    };
+});
+
