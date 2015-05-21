@@ -9,6 +9,10 @@ angular.module('larbiAngularApp')
     {
       'title': 'Blog',
       'link': '/blog'
+    },
+    {
+      'title': 'Contact',
+      'link': '/contact'
     }];
 
     $scope.isCollapsed = true;
