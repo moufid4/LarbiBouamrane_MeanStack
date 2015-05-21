@@ -46,6 +46,12 @@ angular.module('larbiAngularApp').directive("scroll", function ($window) {
                           'color':'#000'
                           };
                           };
+                          scope.size = function () {
+                          return { 
+                            'color':'#000',
+                          'font-size':'14px'
+                          };
+                          };
                                 
                                 console.log(this.pageYOffset);
                   } else {
@@ -57,6 +63,12 @@ angular.module('larbiAngularApp').directive("scroll", function ($window) {
                           scope.color = function () {
                           return { 
                           'color':'#fff'
+                          };
+                          };
+                          scope.size = function () {
+                          return { 
+                            'color':'#fff',
+                          'font-size':'21x'
                           };
                           };
                                 console.log(this.pageYOffset);
