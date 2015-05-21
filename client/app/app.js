@@ -69,7 +69,7 @@ angular.module('larbiAngularApp', [
 
             scope.style = function () {
                 return { 
-                    'height': (newValue.h+30) + 'px',
+                    'height': (newValue.h+20) + 'px',
                     'width': (newValue.w) + 'px' 
                 };
             };
