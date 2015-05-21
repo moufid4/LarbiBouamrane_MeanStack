@@ -1,7 +1,41 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
+<!-- appointment section -->
+    <section class="bg-dark top-padding" id='appointmentSection' >
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>للحصول على استشارة مجانية إبتداء من اليوم</h2>
+
+                <div id='appointment' class="hidden appointment animated bounceIn">
+                    <form class="container">
+                        <div class="row">        
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div id="datetimepicker"></div>
+                                </div>
+                                <div class="col-md-4 form-group">
+                                   <div class="text-right">
+                                        <p><input id="nom" type="text" class="form-control" placeholder="الإسم" aria-describedby="basic-addon1"></p>
+                                        <p><input id="telephone" type="text" class="form-control" placeholder="الهاتف" aria-describedby="basic-addon1"></p>
+                                        <p><input id="email" type="text" class="form-control" placeholder="البريد الإلكتروني" aria-describedby="basic-addon1"></p>  
+                                        <span><input id="en_personne" type="radio" name="f" value="En personne" checked> شخصيا</span><br />
+                                        <span><input id="sur_skype" type="radio" name="f" value="Sur Skype"> على Skype</span>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button href="#appointmentSection"  type="button" class="btn btn-inverse page-scroll" data-dismiss="modal" onclick="showHideAppointment()">إغلق</button>
+                        <button type="submit" class="btn btn-success">إحجز الموعد</button>
+                    </form>
+                </div>
+        
+                <a href="#appointmentSection" id="appointmentButton" class="btn btn-default page-scroll btn-xl wow tada"  data-toggle="modal" data-target="#myModal" onclick="showHideAppointment()" >إحجز موعد!</a>
+                </div>
+            </div>
+    </section>
 <!-- contact section -->
-    <section id="contact" style="padding-top:30px">
+    <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
