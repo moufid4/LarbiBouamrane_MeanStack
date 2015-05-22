@@ -6,7 +6,8 @@ angular.module('larbiAngularApp', [
   'ngSanitize',
   'btford.socket-io',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'angular-inview'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
@@ -79,5 +80,6 @@ angular.module('larbiAngularApp', [
         });
     }
 });
+
 
 
