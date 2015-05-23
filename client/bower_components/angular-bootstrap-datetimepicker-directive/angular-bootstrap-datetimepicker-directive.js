@@ -6,6 +6,7 @@ angular
   .provider('datetimepicker', function () {
     var default_options = {
       stepping:30,
+      locale:'fr',
       defaultDate: moment("2015-05-28T07:00:00.196Z"),
       inline: true,
       sideBySide: true,
