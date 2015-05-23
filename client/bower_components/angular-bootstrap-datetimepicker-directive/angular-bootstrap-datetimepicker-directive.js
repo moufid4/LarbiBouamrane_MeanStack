@@ -1,5 +1,5 @@
 'use strict';
-
+ var date = null;
 angular
   .module('datetimepicker', [])
 
@@ -47,6 +47,7 @@ angular
 
           $element
             .on('dp.change', function (e) {
+              date = e.date;
               if (ngModelCtrl) {
                 $timeout(function () {
                   ngModelCtrl.$setViewValue(e.target.value);

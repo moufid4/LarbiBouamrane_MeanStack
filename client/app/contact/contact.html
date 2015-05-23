@@ -1,5 +1,5 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
-
+<script src="app/appointment.js"></script>
 <!-- appointment section -->
     <section class="bg-dark" id='appointmentSection'>
         <div class="container text-center">
@@ -7,7 +7,7 @@
                 <h2>Pour une consultation gratuite dès aujourd'hui</h2>
 
                 <div id='appointment' class="hidden appointment animated bounceIn">
-                    <form class="container">
+                    <form class="container" ng-submit="submit()">
                         <div class="row">        
                             <div class="row">
                                 <div class="col-md-8">
@@ -34,7 +34,11 @@
             </div>
     </section>
 
-
+  <!-- appointment confirmation -->
+    <aside id="appointment_confirmation" class="bg-dark hidden text-center">
+      <h3>أحسنت! موعدك مع الأستاذ العربي بوعمران سيكون إنشاء الله يوم </h3><h2 id="time" style="color:#EE4B28"></h2><h3>سيصلك بريد إلكتروني للتأكيد بعد لحضات قليلة.</h3>
+    </aside>
+    <!-- end appointment confirmation -->
 <!-- contact section -->
     <section id="contact" style="padding-top:30px">
         <div class="container">
