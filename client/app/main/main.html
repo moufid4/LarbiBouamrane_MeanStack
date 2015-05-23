@@ -72,34 +72,46 @@
         </div>
     </section>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
-        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="deleteThing(thing)">&times;</button></a></li>
-      </ul>
-    </div>
-  </div>
+<!-- appointment section -->
+    <section class="bg-dark" id='appointmentSection'>
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>Pour une consultation gratuite dès aujourd'hui</h2>
 
-  <form class="thing-form">
-    <label>Syncs in realtime across clients</label>
-    <p class="input-group">
-      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="newThing">
-      <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" ng-click="addThing()">Add New</button>
-      </span>
-    </p>
-  </form>
-</div>
+                <div id='appointment' class="hidden appointment animated bounceIn">
+                    <form class="container" ng-submit="submit()">
+                        <div class="row">        
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class ="col-md-8" datetimepicker placeholder="..." name="time" ng-model="ctrl.time"></div>                                </div>
+                                <div class="col-md-4 form-group">
+                                   <div class="text-left">
+                                        <p><input id="nom" type="text" class="form-control" placeholder="Nom" aria-describedby="basic-addon1"></p>
+                                        <p><input id="telephone" type="text" class="form-control" placeholder="Téléphone" aria-describedby="basic-addon1"></p>
+                                        <p><input id="email" type="text" class="form-control" placeholder="Email pour la confirmation" aria-describedby="basic-addon1"></p>  
+                                        <span><input id="en_personne" type="radio" name="f" value="En personne" checked> En personne</span><br />
+                                        <span><input id="sur_skype" type="radio" name="f" value="Sur Skype"> Sur Skype</span>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button href="#appointmentSection"  type="button" class="btn btn-inverse page-scroll" data-dismiss="modal" onclick="showHideAppointment()">Fermer</button>
+                        <button type="submit" class="btn btn-success">Confirmer</button>
+                    </form>
+                </div>
+        
+                <a href="#appointmentSection" id="appointmentButton" class="btn btn-default page-scroll btn-xl wow tada"  data-toggle="modal" data-target="#myModal" onclick="showHideAppointment()" >Prenez un rendez-vous!</a>
+                </div>
+            </div>
+    </section>
 
-<footer class="footer">
-  <div class="container">
-      <p>Angular Fullstack v2.0.13 |
-        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
-         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
-  </div>
-</footer>
+ 
+  <!-- appointment confirmation -->
+    <aside id="appointment_confirmation" class="bg-dark hidden text-center">
+      <h3>Excellent! Votre rendez-vous avec Me Larbi Bouamrane sera le </h3><h2 id="time" style="color:#EE4B28"></h2><h3>Vous recevrez un email de confirmation dans quelques instants.</h3>
+    </aside>
+    <!-- end appointment confirmation -->
 
 <!-- contact section -->
     <section id="contact" style="padding-top:30px">
