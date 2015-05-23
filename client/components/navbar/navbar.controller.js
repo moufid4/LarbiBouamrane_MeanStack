@@ -58,6 +58,7 @@ angular.module('larbiAngularApp').directive("scroll", function ($window) {
                     scope.style = function () {
                           return { 
                           'background-color': 'rgba(255, 255, 255, 0)',
+                          
                           };
                           };
                           scope.color = function () {
