@@ -11,7 +11,7 @@ angular.module('larbiAngularApp')
       'link': '/blog'
     },
     {
-      'title': 'Contact',
+      'title': 'Nous Joindre',
       'link': '/contact'
     }];
 
