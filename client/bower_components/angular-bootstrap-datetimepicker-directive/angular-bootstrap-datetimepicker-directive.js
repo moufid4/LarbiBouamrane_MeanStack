@@ -47,7 +47,8 @@ angular
 
           $element
             .on('dp.change', function (e) {
-              date = e.date;
+             date = moment(e.date).format('dddd Do MMMM YYYY à H:mm');
+
               if (ngModelCtrl) {
                 $timeout(function () {
                   ngModelCtrl.$setViewValue(e.target.value);
