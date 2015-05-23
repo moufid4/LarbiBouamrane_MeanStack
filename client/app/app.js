@@ -44,12 +44,14 @@ angular.module('larbiAngularApp', [
     };
   })
 
-  .run(function ($rootScope, $location, Auth) {
+  .run(function ($rootScope, $location, Auth, $window) {
     // Redirect to login if route requires auth and you're not logged in
     $rootScope.$on('$stateChangeStart', function (event, next) {
+      $window.scrollTo(0,0);
       Auth.isLoggedInAsync(function(loggedIn) {
         if (next.authenticate && !loggedIn) {
           $location.path('/login');
+          
         }
       });
     });
@@ -82,5 +84,5 @@ angular.module('larbiAngularApp', [
     }
 });
 
-
+ 
 
