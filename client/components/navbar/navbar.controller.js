@@ -3,7 +3,7 @@
 angular.module('larbiAngularApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
-      'title': 'Home',
+      'title': 'Accueil',
       'link': '/'
     },
     {
