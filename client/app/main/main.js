@@ -10,4 +10,9 @@ angular.module('larbiAngularApp')
       });
   });
 
-  
+angular.module('larbiAngularApp').controller('scrollCtrl', function($scope, $location, $anchorScroll) {
+   $scope.scrollTo = function(id) {
+      $location.hash(id);
+      $anchorScroll();
+   }
+});
