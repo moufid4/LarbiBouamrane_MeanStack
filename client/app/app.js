@@ -7,7 +7,8 @@ angular.module('larbiAngularApp', [
   'btford.socket-io',
   'ui.router',
   'ui.bootstrap',
-  'angular-inview'
+  'angular-inview',
+  'datetimepicker'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
